@@ -8,6 +8,7 @@ import LogoSwim from "../../assets/swim.png";
 
 const StyledVerticalNav = styled.div`
   position: absolute;
+  left:0px;
   width: 117px;
   min-height: 100%;
   background-color: ${colors.secondary};

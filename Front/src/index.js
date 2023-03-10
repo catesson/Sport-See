@@ -7,19 +7,24 @@ import styled from "styled-components";
 import Header from "./component/layout/Header";
 import MyRouter from "./router/Routes";
 import VeritcalNav from "./component/layout/VericalNav";
-import getData from "./data/api";
 
 const StyledBody = styled.div`
   min-width: 1024px;
 `;
 
 const StyleContent = styled.div`
-position:relative;
+  position: relative;
   width: 100%;
   min-width: 1024px;
   min-height: calc(100vh - 91px);
+  display: flex;
+  justify-content:center
 `;
-console.log(getData(12));
+const StyleRouteContent = styled.div`
+margin-left:117px;
+width:78%;
+min-width: 798px;
+`;
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -28,7 +33,9 @@ root.render(
         <Header />
         <StyleContent>
           <VeritcalNav />
-          <MyRouter />
+          <StyleRouteContent>
+            <MyRouter />
+          </StyleRouteContent>
         </StyleContent>
       </StyledBody>
     </Router>
