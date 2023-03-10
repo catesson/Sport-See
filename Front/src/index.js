@@ -1,17 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./index.css";
+import styled from "styled-components";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import Header from "./component/layout/Header";
+import MyRouter from "./router/Routes";
+import VeritcalNav from "./component/layout/VericalNav";
+import getData from "./data/api";
+
+const StyledBody = styled.div`
+  min-width: 1024px;
+`;
+
+const StyleContent = styled.div`
+position:relative;
+  width: 100%;
+  min-width: 1024px;
+  min-height: calc(100vh - 91px);
+`;
+console.log(getData(12));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <StyledBody>
+        <Header />
+        <StyleContent>
+          <VeritcalNav />
+          <MyRouter />
+        </StyleContent>
+      </StyledBody>
+    </Router>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
