@@ -8,6 +8,7 @@ import Header from "./component/layout/Header";
 import MyRouter from "./router/Routes";
 import VeritcalNav from "./component/layout/VericalNav";
 
+
 const StyledBody = styled.div`
   min-width: 1024px;
 `;
@@ -25,6 +26,8 @@ margin-left:117px;
 width:78%;
 min-width: 798px;
 `;
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

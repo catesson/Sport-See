@@ -1,0 +1,57 @@
+{
+  "user": {
+    "id": 12,
+    "userInfos": { "firstName": "Steven", "lastName": "Catesson", "age": 30 },
+    "todayScore": 0.12,
+    "keyData": {
+      "calorieCount": 2030,
+      "proteinCount": 125,
+      "carbohydrateCount": 290,
+      "lipidCount": 30
+    }
+  },
+  "activity": {
+    "userId": 12,
+    "sessions": [
+      { "day": "2020-07-01", "kilogram": 90, "calories": 240 },
+      { "day": "2020-07-02", "kilogram": 90, "calories": 220 },
+      { "day": "2020-07-03", "kilogram": 91, "calories": 280 },
+      { "day": "2020-07-04", "kilogram": 91, "calories": 290 },
+      { "day": "2020-07-05", "kilogram": 90, "calories": 160 },
+      { "day": "2020-07-06", "kilogram": 88, "calories": 162 },
+      { "day": "2020-07-07", "kilogram": 86, "calories": 390 }
+      
+    ]
+  },
+  "averageSession": {
+    "userId": 12,
+    "sessions": [
+      { "day": 1, "sessionLength": 33 },
+      { "day": 2, "sessionLength": 33 },
+      { "day": 3, "sessionLength": 49 },
+      { "day": 4, "sessionLength": 52 },
+      { "day": 5, "sessionLength": 0 },
+      { "day": 6, "sessionLength": 0 },
+      { "day": 7, "sessionLength": 66 }
+    ]
+  },
+  "performance": {
+    "userId": 12,
+    "kind": {
+      "1": "cardio",
+      "2": "energy",
+      "3": "endurance",
+      "4": "strength",
+      "5": "speed",
+      "6": "intensity"
+    },
+    "data": [
+      { "value": 90, "kind": 1 },
+      { "value": 130, "kind": 2 },
+      { "value": 120, "kind": 3 },
+      { "value": 50, "kind": 4 },
+      { "value": 200, "kind": 5 },
+      { "value": 80, "kind": 6 }
+    ]
+  }
+}
