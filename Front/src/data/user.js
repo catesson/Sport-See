@@ -83,8 +83,10 @@ async function getUser(id) {
       new performance(allPerformance.data, allPerformance.kind),
       allSessions.map((sess) => {
         return new session(sess.day, sess.sessionLength);
+       
       })
     );
+    console.log(user)
     return user;
   } catch {
     console.log("error");

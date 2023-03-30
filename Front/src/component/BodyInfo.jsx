@@ -3,6 +3,7 @@ import colors from "../utils/colors";
 import PictureBodyInfo from "./PictureBodyInfo";
 
 const StyledBodyInfo = styled.div`
+margin:20px auto;
   display: flex;
   padding: 32px;
   width: 194px;
