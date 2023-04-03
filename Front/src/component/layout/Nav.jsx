@@ -1,3 +1,7 @@
+/**
+ * This is a description of the function Nav.
+ * @return {JSX.Element} Nav Component .
+ */
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import colors from "../../utils/colors";

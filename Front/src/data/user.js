@@ -15,6 +15,7 @@ class User {
     old,
     firstName,
     lastName,
+    todayScore,
     userBody,
     activity,
     performance,
@@ -24,6 +25,7 @@ class User {
     this.old = old;
     this.firstName = firstName;
     this.lastName = lastName;
+    this.todayScore = todayScore;
     this.userBody = userBody;
     this.activity = activity;
     this.performance = performance;
@@ -40,6 +42,9 @@ class User {
   }
   getLastName() {
     return this.lastName;
+  }
+  getTodayScorePercentage(){
+    return (this.todayScore)
   }
   getOld() {
     return this.old;
@@ -71,6 +76,7 @@ async function getUser(id) {
       userInfos.age,
       userInfos.firstName,
       userInfos.lastName,
+      data.todayScore,
       new bodyData(
         userBody.calorieCount,
         userBody.proteinCount,

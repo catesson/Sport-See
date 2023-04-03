@@ -1,3 +1,7 @@
+/**
+ * This is a description of the function VerticalNav.
+ * @return {JSX.Element} Vertical Component .
+ */
 import styled from "styled-components";
 import colors from "../../utils/colors";
 import NavButton from "../NavButton";

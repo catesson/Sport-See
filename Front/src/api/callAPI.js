@@ -1,8 +1,10 @@
-import REACT_APP_MOCKED_DATA from "../mocked-data/variable";
 import mockedData from "../mocked-data/mocked-user.json";
 
+
+const isMocked = process.env.REACT_APP_MOCKED_DATA==="true" ? true : false;
+console.log(isMocked)
 async function getUserData(id) {
-  if (REACT_APP_MOCKED_DATA) {
+  if (isMocked) {
     const data = mockedData.user;
     return data;
   }
@@ -15,7 +17,7 @@ async function getUserData(id) {
 }
 
 async function getActivityData(id) {
-  if (REACT_APP_MOCKED_DATA) {
+  if (isMocked) {
     const data = mockedData.activity;
     return data.sessions;
   }
@@ -28,7 +30,7 @@ async function getActivityData(id) {
 }
 
 async function getPerformanceData(id) {
-  if (REACT_APP_MOCKED_DATA) {
+  if (isMocked) {
     const data = mockedData.performance;
     return data;
   }
@@ -41,7 +43,7 @@ async function getPerformanceData(id) {
 }
 
 async function getAverageSessionData(id) {
-  if (REACT_APP_MOCKED_DATA) {
+  if (isMocked) {
     const data = mockedData.averageSession;
     return data.sessions;
   }

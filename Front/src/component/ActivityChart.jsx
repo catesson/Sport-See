@@ -10,7 +10,6 @@ import {
   Tooltip,
   Legend,
   Rectangle,
-  Text,
   ResponsiveContainer} from "recharts";
 
 const TooltipContent = ({ active, payload }) => {

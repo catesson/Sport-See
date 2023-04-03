@@ -1,5 +1,6 @@
 import "../style/componentStyles.css";
-import React from "react";
+import React, { useMemo } from "react";
+import { PureComponent } from "react";
 import {
   LineChart,
   Line,
@@ -32,8 +33,29 @@ const TooltipContent = ({ active, payload }) => {
   return null;
 };
 
+const dayMaping = {
+  1: "L",
+  2: "M",
+  3: "M",
+  4: "J",
+  5: "V",
+  6: "S",
+  7: "D",
+};
+
+
 
 export default function AverageChart({ data }) {
+  const cleanData = useMemo(
+    () =>
+      data.map((item) => ({
+        ...item,
+        day: dayMaping[item.day],
+      })),
+    [data]
+  );
+  console.log(cleanData);
+
   return (
     <div className="average-chart">
       <p className="average-chart__title">Durée moyenne des sessions</p>
@@ -42,23 +64,25 @@ export default function AverageChart({ data }) {
         height={186}
         minWidth={150}
         maxWidth={600}
+        
       >
         <LineChart
           height={300}
-          data={data}
+          data={cleanData}
           margin={{
             top: 5,
-            right: 0,
-            left: 0,
+            right: 15,
+            left: 15,
             bottom: 5,
           }}
         >
           <XAxis
-            stroke="white"
-            tickSize={7}
+            strokeWidth={2}
             axisLine={false}
             tickLine={false}
             dataKey="day"
+            tick={{fill:"#fff"}}
+            
           />
           <YAxis
             dataKey="sessionLenght"

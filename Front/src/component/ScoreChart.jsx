@@ -9,10 +9,11 @@ import {
 } from "recharts";
 
 export default function ScoreChart({data}) {
+  console.log(data)
   return (
     <div className="score-chart">
         <p className="score-chart__title">Score</p>
-    <ResponsiveContainer width="100%" height={215} >
+    <ResponsiveContainer width="100%" height={191} >
       <RadialBarChart
 
         cx="50%"
@@ -20,7 +21,7 @@ export default function ScoreChart({data}) {
         innerRadius="100%"
         outerRadius="100%"
         startAngle={90}
-        endAngle={180}
+        endAngle={270}
         barSize={10}
         data={data}
       >
@@ -29,6 +30,7 @@ export default function ScoreChart({data}) {
           background={true}
           fill={colors.primary}
             dataKey="value"
+            cornerRadius={10}
         />
 
       </RadialBarChart>

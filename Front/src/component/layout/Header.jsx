@@ -1,4 +1,7 @@
-
+/**
+ * This is a description of the function Header.
+ * @return {JSX.Element} Header Component .
+ */
 import styled from "styled-components";
 import colors from "../../utils/colors";
 import Logo from "../../assets/logo-SportSee.png"
