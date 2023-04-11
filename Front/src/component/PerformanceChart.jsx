@@ -3,6 +3,13 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } fro
 import "../style/componentStyles.css"
 import PropTypes from 'prop-types' 
 
+/**
+ * return a jsx chart (Performance Chart)
+ * @function
+ * @name PerformanceChart
+ * @param {array} data array of all object performance 
+ * @returns {JSX.Element} contains the chart with all performance data
+ */
 
 
 export default function PerformanceChart({data}){

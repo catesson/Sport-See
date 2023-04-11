@@ -1,6 +1,7 @@
 /**
- * This is a description of the function Header.
- * @component
+ * Return the jsx element who contains the Header
+ * @function
+ * @name Header
  * @return {JSX.Element} Header Component .
  */
 import styled from "styled-components";

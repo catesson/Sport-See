@@ -1,5 +1,7 @@
 /**
- * This is a description of the function Nav.
+ * Return the jsx element who contains the Nav
+ * @function
+ * @name Nav
  * @return {JSX.Element} Nav Component .
  */
 import { Link } from "react-router-dom";

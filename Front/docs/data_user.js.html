@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: data/user.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: data/user.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+import {
+  getUserData,
+  getActivityData,
+  getPerformanceData,
+  getAverageSessionData,
+} from "../api/callAPI";
+import bodyData from "./bodyData";
+import { activity } from "./activity";
+import performance from "./performance";
+import session from "./session";
+
+/**
+ * Represents a user.
+ * @class
+ */
+class User {
+   /**
+   * @constructor
+   * @param {number} id - The user's id.
+   * @param {number} old - The user's age.
+   * @param {string} firstName - The user's first name.
+   * @param {string} lastName - The user's last name.
+   * @param {number} todayScore - The user's score of the day.
+   * @param {bodyData} userBody - The user's body data with class bodyData.
+   * @param {activity[]} activity - The user's activity data with class activity.
+   * @param {performance} performance - The user's performance data with class performance.
+   * @param {session[]} sessionAverage - The user's average session data with class session.
+   */
+  constructor(
+    id,
+    old,
+    firstName,
+    lastName,
+    todayScore,
+    userBody,
+    activity,
+    performance,
+    sessionAverage
+  ) {
+    this.id = id;
+    this.old = old;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.todayScore = todayScore;
+    this.userBody = userBody;
+    this.activity = activity;
+    this.performance = performance;
+    this.sessionAverage = sessionAverage;
+  }
+  getUser() {
+    return this.User;
+  }
+  getid() {
+    return this.id;
+  }
+  getFirstName() {
+    return this.firstName;
+  }
+  getLastName() {
+    return this.lastName;
+  }
+  getTodayScorePercentage(){
+    return (this.todayScore)
+  }
+  getOld() {
+    return this.old;
+  }
+  getUserBody() {
+    return this.userBody;
+  }
+  getActivity() {
+    return this.activity;
+  }
+  getPerformance() {
+    return this.performance;
+  }
+  getSession() {
+    return this.sessionAverage;
+  }
+}
+
+/**
+ * Retrieves a User object from the API.
+ * @async
+ * @function
+ * @param {string} id - The user's id.
+ * @return {Promise&lt;User>}
+ */
+async function getUser(id) {
+  try {
+    const data = await getUserData(id);
+    const userInfos = data.userInfos;
+    const userBody = data.keyData;
+    const allActivity = await getActivityData(id);
+    const allPerformance = await getPerformanceData(id);
+    const allSessions = await getAverageSessionData(id);
+    const user = new User(
+      data.id,
+      userInfos.age,
+      userInfos.firstName,
+      userInfos.lastName,
+      data.todayScore,
+      new bodyData(
+        userBody.calorieCount,
+        userBody.proteinCount,
+        userBody.carbohydrateCount,
+        userBody.lipidCount
+      ),
+      /*create an activity for all data in allActivity*/
+      allActivity.map((act) => {
+        return new activity(act.day, act.kilogram, act.calories);
+      }),
+      new performance(allPerformance.data, allPerformance.kind),
+      /*create a session for all data in allSession*/
+      allSessions.map((sess) => {
+        return new session(sess.day, sess.sessionLength);
+       
+      })
+    );
+    return user;
+  } catch {
+    console.log("error");
+  }
+}
+
+export { User, getUser };
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="User.html">User</a></li><li><a href="activity.html">activity</a></li><li><a href="bodyData.html">bodyData</a></li><li><a href="performance.html">performance</a></li><li><a href="session.html">session</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActivityChart">ActivityChart</a></li><li><a href="global.html#AverageChart">AverageChart</a></li><li><a href="global.html#BodyInfo">BodyInfo</a></li><li><a href="global.html#CustomLegend">CustomLegend</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#NavButton">NavButton</a></li><li><a href="global.html#PerformanceChart">PerformanceChart</a></li><li><a href="global.html#PictureBodyInfo">PictureBodyInfo</a></li><li><a href="global.html#ProfilHeader">ProfilHeader</a></li><li><a href="global.html#ScoreChart">ScoreChart</a></li><li><a href="global.html#TooltipContent">TooltipContent</a></li><li><a href="global.html#VeritcalNav">VeritcalNav</a></li><li><a href="global.html#colors">colors</a></li><li><a href="global.html#getActivityData">getActivityData</a></li><li><a href="global.html#getAverageSessionData">getAverageSessionData</a></li><li><a href="global.html#getPerformanceData">getPerformanceData</a></li><li><a href="global.html#getUser">getUser</a></li><li><a href="global.html#getUserData">getUserData</a></li><li><a href="global.html#isMocked">isMocked</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Apr 11 2023 16:59:31 GMT+0200 (heure d’été d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

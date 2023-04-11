@@ -2,6 +2,8 @@ import styled from "styled-components";
 import colors from "../utils/colors";
 import PropTypes from 'prop-types' 
 
+
+
 const StyledProfilHeader = styled.div`
 margin-top:68px;`;
 
@@ -25,8 +27,15 @@ margin-top:41px;
   font-size: 18px;
   line-height: 24px;
 `;
-
+/**
+ * JSX element who content the name of the user
+ * @function 
+ * @name ProfilHeader
+ * @param {string} name Name of the user
+ * @returns {JSX.Element}
+ */
 function ProfilHeader({ name }) {
+  
   return (
     <StyledProfilHeader>
       <ProfilHeaderHello>

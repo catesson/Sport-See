@@ -42,6 +42,17 @@ font-weight: 500;
 font-size: 14px;
 line-height: 24px;`
 
+/**
+ * return a jsx element with the body information and picture who are in props
+ * @function
+ * @name BodyInfo
+ * @param {string} picture the link of the picture
+ * @param {string} color the hexa code of the color
+ * @param {string} unite the acronym of the un
+ * @param {string} uniteName the complete name of the unit
+ * @param {number} value the value of the unit
+ * @returns {JSX.Element}
+ */
 
 function BodyInfo({ picture, color, unite, uniteName, value }) {
   return (

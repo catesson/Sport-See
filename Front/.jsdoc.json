@@ -1,0 +1,15 @@
+{
+  "source": {
+    "include": ["src/"],
+    "includePattern":  ".+\\.(js|jsx)$",
+    "recurse": true
+  },
+  "plugins": ["plugins/markdown", "node_modules/jsdoc-babel"],
+  "babel": {
+    "extensions": ["js", "jsx"],
+    "presets": ["@babel/preset-react"]
+  },
+  "opts": {
+    "destination": "./docs"
+  }
+}

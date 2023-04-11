@@ -10,6 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+/**Custum tooltip for the Average Chart */
 const TooltipContent = ({ active, payload }) => {
   if (active && payload) {
     return (
@@ -42,7 +43,13 @@ const dayMaping = {
   7: "D",
 };
 
-
+/**
+ * return a jsx chart
+ * @function
+ * @name AverageChart
+ * @param {Array} data Contains all of the average score
+ * @returns {JSX.Element} return the chart with the average score 
+ */
 
 export default function AverageChart({ data }) {
   const cleanData = useMemo(

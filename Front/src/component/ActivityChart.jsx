@@ -13,6 +13,7 @@ import {
   Rectangle,
   ResponsiveContainer} from "recharts";
 
+  /**Custum tooltip for the Activity Chart */
 const TooltipContent = ({ active, payload }) => {
   if (active && payload) {
     return (
@@ -27,7 +28,7 @@ const TooltipContent = ({ active, payload }) => {
 
   return null;
 };
-
+/**Custum legend for the Activity Chart */
 const CustomLegend = ({ payload }) => {
   return (
     <div className="legend">
@@ -50,6 +51,13 @@ const CustomLegend = ({ payload }) => {
 };
 <Legend content={CustomLegend} />;
 
+/**
+ * return the Activity Chart
+ * @function
+ * @name ActivityChart
+ * @param {array} data Contains all activity data
+ * @returns {JSX.Element} retunr the Jsx element with the chart who contains all activity data
+ */
 export default function ActivityChart({ data }) {
   const allDate = data.map((date) => {
     return date.getDate();

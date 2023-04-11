@@ -8,6 +8,13 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+/**
+ * This is a description of the function VerticalNav.
+ * @function
+ * @name ScoreChart
+ * @param {object} data content the value of the score
+ * @return {JSX.Element} Score chart .
+ */
 export default function ScoreChart({data}) {
   return (
     <div className="score-chart">

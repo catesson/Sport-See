@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: performance</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: performance</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>performance<span class="signature">(performance, kind)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description"><p>represent a performance</p></div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="performance"><span class="type-signature"></span>new performance<span class="signature">(performance, kind)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>performance</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;object></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>performance data of api exemple {&quot;value&quot;:80,&quot;kind&quot;:1}</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>kind</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>all kind</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="data_performance.js.html">data/performance.js</a>, <a href="data_performance.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getKindName"><span class="type-signature"></span>getKindName<span class="signature">(data, theKind)</span><span class="type-signature"> &rarr; {Array.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>convert the kind number to the kind name. It's only use on the constructor</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;object></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>performance data of api exemple {&quot;value&quot;:80,&quot;kind&quot;:1}</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>theKind</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the name of all kind</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="data_performance.js.html">data/performance.js</a>, <a href="data_performance.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>content the value of performance and the name of the kind</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="User.html">User</a></li><li><a href="activity.html">activity</a></li><li><a href="bodyData.html">bodyData</a></li><li><a href="performance.html">performance</a></li><li><a href="session.html">session</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActivityChart">ActivityChart</a></li><li><a href="global.html#AverageChart">AverageChart</a></li><li><a href="global.html#BodyInfo">BodyInfo</a></li><li><a href="global.html#CustomLegend">CustomLegend</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#Nav">Nav</a></li><li><a href="global.html#NavButton">NavButton</a></li><li><a href="global.html#PerformanceChart">PerformanceChart</a></li><li><a href="global.html#PictureBodyInfo">PictureBodyInfo</a></li><li><a href="global.html#ProfilHeader">ProfilHeader</a></li><li><a href="global.html#ScoreChart">ScoreChart</a></li><li><a href="global.html#TooltipContent">TooltipContent</a></li><li><a href="global.html#VeritcalNav">VeritcalNav</a></li><li><a href="global.html#colors">colors</a></li><li><a href="global.html#getActivityData">getActivityData</a></li><li><a href="global.html#getAverageSessionData">getAverageSessionData</a></li><li><a href="global.html#getPerformanceData">getPerformanceData</a></li><li><a href="global.html#getUser">getUser</a></li><li><a href="global.html#getUserData">getUserData</a></li><li><a href="global.html#isMocked">isMocked</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Apr 11 2023 16:59:31 GMT+0200 (heure d’été d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

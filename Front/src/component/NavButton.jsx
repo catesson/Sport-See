@@ -1,11 +1,4 @@
-/**
- * This is a description of the function Header.
- * @component
- * @param {object} props The properties of the component
- * @param {string} picture the link of picture
- * @param {string} link the link where the user go on click
- * @return {JSX.Element} Header Component .
- */
+
 import styled from "styled-components";
 import colors from "../utils/colors";
 import { Link } from "react-router-dom";
@@ -19,6 +12,15 @@ border-radius:6px;
 margin:10px 0;
 background:no-repeat center url(${({picture}) => picture}) ${colors.white};
 `
+
+/**
+ * Retrun a JSX element who contains the Nav Button.
+ * @function
+ * @name NavButton
+ * @param {string} picture the link of picture
+ * @param {string} link the link where the user go on click
+ * @return {JSX.Element} Header Component .
+ */
 
 function NavButton({picture, link}){
  return (<StyledNavButton to={link} picture={picture}></StyledNavButton>)
