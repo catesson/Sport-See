@@ -1,3 +1,6 @@
+/**
+ * content the color of the website
+ */
 const colors = {
     primary: '#E60000',
     secondary: '#000000',

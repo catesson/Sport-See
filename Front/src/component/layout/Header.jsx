@@ -1,5 +1,6 @@
 /**
  * This is a description of the function Header.
+ * @component
  * @return {JSX.Element} Header Component .
  */
 import styled from "styled-components";

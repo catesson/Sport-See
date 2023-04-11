@@ -1,8 +1,7 @@
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
-import colors from '../utils/colors';
 import "../style/componentStyles.css"
-
+import PropTypes from 'prop-types' 
 
 
 
@@ -19,4 +18,14 @@ return (
     </ResponsiveContainer>
     </div>
   );
+}
+
+PerformanceChart.propTypes= {
+  performance : PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      kind: PropTypes.oneOf(['cardio', 'energy', 'endurance', 'strength', 'speed', 'intensity']).isRequired,
+    }).isRequired,
+  )
+ 
 }

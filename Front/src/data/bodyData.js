@@ -1,4 +1,15 @@
+/**
+ * represent a data of the body 
+ * @class
+ */
 class bodyData{
+    /**
+     * @constructor
+     * @param {number} calorie 
+     * @param {number} protein 
+     * @param {number} carbohydrate 
+     * @param {number} lipid 
+     */
     constructor(calorie, protein, carbohydrate, lipid){
         this.calorie = calorie;
         this.protein = protein;

@@ -1,8 +1,20 @@
 import mockedData from "../mocked-data/mocked-user.json";
 
+/**
 
+Boolean flag indicating if the data is mocked or not.
+@type {boolean} 
+*/
 const isMocked = process.env.REACT_APP_MOCKED_DATA==="true" ? true : false;
-console.log(isMocked)
+
+/**
+
+Returns the user data from an API endpoint, either mocked or not.
+ * @async
+ * @function
+* @param {number} id - The user ID.
+* @returns {Promise<Object>} The user data.
+*/
 async function getUserData(id) {
   if (isMocked) {
     const data = mockedData.user;
@@ -15,7 +27,14 @@ async function getUserData(id) {
 
   return data;
 }
+/**
 
+Returns the activity data from an API endpoint, either mocked or not.
+ * @async
+ * @function
+* @param {number} id - The user ID.
+* @returns {Promise<Object>} The activity data.
+*/
 async function getActivityData(id) {
   if (isMocked) {
     const data = mockedData.activity;
@@ -28,7 +47,13 @@ async function getActivityData(id) {
 
   return data.sessions;
 }
-
+/**
+Returns the performance data from an API endpoint, either mocked or not.
+ * @async
+ * @function
+*@param {number} id - The user ID.
+*@returns {Promise<Object>} The perfomance data.
+*/
 async function getPerformanceData(id) {
   if (isMocked) {
     const data = mockedData.performance;
@@ -42,6 +67,13 @@ async function getPerformanceData(id) {
   return data;
 }
 
+/**
+Returns the session data from an API endpoint, either mocked or not.
+ * @async
+ * @function
+* @param {number} id - The user ID.
+* @returns {Promise<Object>} The session data.
+*/
 async function getAverageSessionData(id) {
   if (isMocked) {
     const data = mockedData.averageSession;

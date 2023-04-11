@@ -1,3 +1,6 @@
+/**
+ * @render content of the site (header, verticalNav, router)
+ */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";

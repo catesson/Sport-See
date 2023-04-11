@@ -1,10 +1,13 @@
 /**
  * This is a description of the function VerticalNav.
+ * @component
  * @return {JSX.Element} Vertical Component .
  */
 import styled from "styled-components";
 import colors from "../../utils/colors";
 import NavButton from "../NavButton";
+
+/* all logo of vertical nav bar button*/
 import LogoBodyBuilding from "../../assets/bodybuilding.png";
 import LogoCyclist from "../../assets/cyclist.png";
 import LogoMeditation from "../../assets/meditation.png";

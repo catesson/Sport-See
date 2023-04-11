@@ -1,6 +1,7 @@
 import React from "react";
 import "../style/componentStyles.css";
 import colors from "../utils/colors";
+import PropTypes from 'prop-types'
 import {
   BarChart,
   Bar,
@@ -96,4 +97,7 @@ export default function ActivityChart({ data }) {
     </ResponsiveContainer>
     </div>
   );
+}
+ActivityChart.propTypes = {
+  data : PropTypes.array
 }

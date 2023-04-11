@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import colors from "../utils/colors";
+import PropTypes from 'prop-types' 
 
 const StyledProfilHeader = styled.div`
 margin-top:68px;`;
@@ -39,3 +40,8 @@ function ProfilHeader({ name }) {
 }
 
 export default ProfilHeader;
+
+
+ProfilHeader.propTypes = {
+  name : PropTypes.string
+}

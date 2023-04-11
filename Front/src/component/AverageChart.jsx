@@ -1,13 +1,12 @@
 import "../style/componentStyles.css";
 import React, { useMemo } from "react";
-import { PureComponent } from "react";
+import PropTypes from 'prop-types'
 import {
   LineChart,
   Line,
   XAxis,
   YAxis,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 
@@ -54,7 +53,6 @@ export default function AverageChart({ data }) {
       })),
     [data]
   );
-  console.log(cleanData);
 
   return (
     <div className="average-chart">
@@ -105,4 +103,7 @@ export default function AverageChart({ data }) {
       </ResponsiveContainer>
     </div>
   );
+}
+AverageChart.propTypes = {
+  data : PropTypes.array
 }

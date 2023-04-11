@@ -1,15 +1,14 @@
 import React from "react";
 import "../style/componentStyles.css";
 import colors from "../utils/colors";
+import PropTypes from 'prop-types' 
 import {
   RadialBarChart,
   RadialBar,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 
 export default function ScoreChart({data}) {
-  console.log(data)
   return (
     <div className="score-chart">
         <p className="score-chart__title">Score</p>
@@ -40,4 +39,11 @@ export default function ScoreChart({data}) {
 
     </div>
   );
+}
+
+
+ScoreChart.propTypes = {
+  0 : PropTypes.objectOf(PropTypes.shape({
+    value : PropTypes.number
+  }))
 }
