@@ -5,7 +5,7 @@
 <p>Yarn</p>
 
 
-<h2>. For the Back-end </h2>
+<h2>2. For the Back-end </h2>
 <p>use the commande <code> cd Back/ </code></p>
 <p>then install the dependance with <code>yarn </code></p>
 <p>then use <code> yarn dev </code> for run the API</p>
