@@ -52,7 +52,7 @@ const CustomLegend = ({ payload }) => {
 <Legend content={CustomLegend} />;
 
 /**
- * return the Activity Chart
+ * return a jsx chart (Activity Chart)
  * @function
  * @name ActivityChart
  * @param {array} data Contains all activity data

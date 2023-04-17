@@ -44,7 +44,7 @@ const dayMaping = {
 };
 
 /**
- * return a jsx chart
+ * return a jsx chart (Average Chart)
  * @function
  * @name AverageChart
  * @param {Array} data Contains all of the average score
