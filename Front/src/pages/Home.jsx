@@ -46,7 +46,7 @@ function Home(id) {
   const [sessions, setSession] = useState([{}]);
   let navigate = useNavigate()
   useEffect(() => {
-    getUser(18).then((data) => {
+    getUser(12).then((data) => {
       if (data !== Error) {
         setUser(data);
         setTodayScore(data.todayScore * 100);
