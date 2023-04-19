@@ -56,12 +56,9 @@ const CustomLegend = ({ payload }) => {
  * @function
  * @name ActivityChart
  * @param {array} data Contains all activity data
- * @returns {JSX.Element} retunr the Jsx element with the chart who contains all activity data
+ * @returns {JSX.Element} return the Jsx element with the chart who contains all activity data
  */
 export default function ActivityChart({ data }) {
-  const allDate = data.map((date) => {
-    return date.getDate();
-  });
   return (
     <div className="activity-chart">
     <ResponsiveContainer  height={320}  maxWidth={1500} minWidth={200} >
