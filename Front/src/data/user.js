@@ -90,6 +90,7 @@ class User {
 async function getUser(id) {
   try {
     const data = await getUserData(id);
+    const score =  data.score ? data.score : data.todayScore;
     const userInfos = data.userInfos;
     const userBody = data.keyData;
     const allActivity = await getActivityData(id);
@@ -100,7 +101,7 @@ async function getUser(id) {
       userInfos.age,
       userInfos.firstName,
       userInfos.lastName,
-      data.todayScore,
+      score,
       new bodyData(
         userBody.calorieCount,
         userBody.proteinCount,
@@ -120,7 +121,7 @@ async function getUser(id) {
     );
     return user;
   } catch {
-    console.log("error");
+    return Error
   }
 }
 

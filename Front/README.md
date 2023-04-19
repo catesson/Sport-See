@@ -4,5 +4,5 @@
 <p>React (version 18.12)</p> 
 
 <h2> start the projet</h2>
-<p>install the dependance <code>with npm install </code></p>
+<p>install the dependance with <code>npm install </code></p>
 <p>then start the project with <code>npm start </code></p>

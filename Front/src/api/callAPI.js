@@ -16,7 +16,7 @@ Returns the user data from an API endpoint, either mocked or not.
 * @returns {Promise<Object>} The user data.
 */
 async function getUserData(id) {
-  if (isMocked) {
+ if (isMocked) {
     const data = mockedData.user;
     return data;
   }
@@ -25,8 +25,8 @@ async function getUserData(id) {
   const reponseJson = await reponse.json();
   const data = reponseJson.data;
 
-  return data;
-}
+  return data;}
+
 /**
 
 Returns the activity data from an API endpoint, either mocked or not.
